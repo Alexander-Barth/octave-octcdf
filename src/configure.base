@@ -283,6 +283,12 @@ dnl should check that $(OCTAVE) --version matches $(MKOCTFILE) --version
 AC_CHECK_PROG(OCTAVE,octave,octave)
 OCTAVE_CONFIG_EVAL(VERSION,OCTAVE_VERSION)
 
+oct_ver=`echo $OCTAVE_VERSION | sed -e "s/\.//" -e "s/\..*$//"`
+
+if test "$oct_ver" -ge "40" ; then
+   OCTCDF_CFLAGS="$OCTCDF_CFLAGS -DOV_REP_TYPE=octave_base_value"
+fi 
+
 dnl grab canonical host type so we can write system specific install stuff
 OCTAVE_CONFIG_EVAL(CANONICAL_HOST_TYPE,canonical_host_type)
 

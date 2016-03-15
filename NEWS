@@ -1,6 +1,14 @@
 Summary of important user-visible changes for releases of the octcdf package
 
 ===============================================================================
+octcdf-1.1.10   Release Date: 2016-03-15   Release Manager: Alexander Barth
+===============================================================================
+
+ ** This interface is now marked as obsolete. Please use the netcdf package 
+    instead.
+ ** Apply patch from John Donoghue to build with octave > 4.0.0 (bug #46531)
+
+===============================================================================
 octcdf-1.1.9   Release Date: 2015-06-10   Release Manager: Alexander Barth
 ===============================================================================
 
